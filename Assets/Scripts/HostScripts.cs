@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Saaskun;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
 public class HostScripts : MonoBehaviour
 {
@@ -19,6 +21,10 @@ public class HostScripts : MonoBehaviour
         {
             sendMessageToClient();
         }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Restart();
+        }
     }
 
     void sendMessageToClient()
@@ -30,5 +36,18 @@ public class HostScripts : MonoBehaviour
     public void ReceiveFromClient(string message)
     {
         Debug.Log("Message received from client: " + message);
+    }
+
+    void SendRestart() 
+    {
+        Debug.Log("Resetting Client");
+
+        _sendScripts.SendData("Reset", "Reset", 8001);
+
+        Invoke("Restart", 2f);
+    }
+
+    void Restart() {
+        SceneManager.LoadScene(0);
     }
 }

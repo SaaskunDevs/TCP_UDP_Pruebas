@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Saaskun;
 using System.Net.Sockets;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
 public class ClientScripts : MonoBehaviour
 {
@@ -31,5 +33,10 @@ public class ClientScripts : MonoBehaviour
     public void ReceiveFromHost(string message)
     {
         Debug.Log("Message received from host: " + message);
+    }   
+
+    public void RessScene(string message) {
+        SceneManager.LoadScene(0);
     }
+
 }
