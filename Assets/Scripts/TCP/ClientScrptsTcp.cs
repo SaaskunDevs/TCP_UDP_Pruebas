@@ -23,7 +23,7 @@ public class ClientScrptsTcp : MonoBehaviour
     public void SendToHost()
     {
         Debug.Log("Send to host");
-        _tcpSender.SendMessageToServers("Dinamita" + "Envio desde cliente" + 8080);
+        _tcpSender.SendMessageToServers("Dinamita|" + "Envio desde cliente|" + 8080);
     }
 
     public void ReciveFromHost(string message)

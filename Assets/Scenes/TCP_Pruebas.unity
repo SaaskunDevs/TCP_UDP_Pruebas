@@ -747,7 +747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hostGameObject: {fileID: 2134105818}
   _clientGameObject: {fileID: 1543713955}
-  isHost: 1
+  isHost: 0
 --- !u!4 &1782976551
 Transform:
   m_ObjectHideFlags: 0
