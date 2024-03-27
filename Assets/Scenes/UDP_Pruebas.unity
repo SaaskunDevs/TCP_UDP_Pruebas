@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 463244026}
   - component: {fileID: 463244027}
   - component: {fileID: 463244028}
+  - component: {fileID: 463244029}
   m_Layer: 0
   m_Name: Client
   m_TagString: Untagged
@@ -181,6 +182,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _send: {fileID: 463244027}
+--- !u!114 &463244029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463244025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20bb2dc8505c6ac46a90432d83414b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: 8001
+  actions:
+  - code: Recibo
+    action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 463244028}
+          m_TargetAssemblyTypeName: ClientScripts, Assembly-CSharp
+          m_MethodName: ReceiveFromHost
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &516954912
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hostGameObject: {fileID: 827928076}
   _clientGameObject: {fileID: 463244025}
-  isHost: 1
+  isHost: 0
 --- !u!4 &516954914
 Transform:
   m_ObjectHideFlags: 0
@@ -381,7 +412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &543273565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,6 +533,7 @@ GameObject:
   - component: {fileID: 827928077}
   - component: {fileID: 827928078}
   - component: {fileID: 827928079}
+  - component: {fileID: 827928080}
   m_Layer: 0
   m_Name: Host
   m_TagString: Untagged
@@ -564,6 +596,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8300939facc37b7468dcfbced6db9c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sendScripts: {fileID: 827928080}
+--- !u!114 &827928080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827928076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc94092688a2c464783d2c8e528cd6b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1453106219

@@ -28,7 +28,7 @@ public class ClientScripts : MonoBehaviour
         _send.SendData("Dinamita", "Envio desde cliente", 8080);
     }
 
-    void ReceiveFromHost(string message)
+    public void ReceiveFromHost(string message)
     {
         Debug.Log("Message received from host: " + message);
     }
