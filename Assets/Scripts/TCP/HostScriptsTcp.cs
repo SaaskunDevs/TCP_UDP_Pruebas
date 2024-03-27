@@ -20,7 +20,7 @@ public class HostScriptsTcp : MonoBehaviour
         {
             SendToClient();
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.H))
         {
             ResetClientAndHost();
         }
