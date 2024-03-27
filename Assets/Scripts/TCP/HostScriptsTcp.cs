@@ -29,7 +29,7 @@ public class HostScriptsTcp : MonoBehaviour
     void SendToClient()
     {
         Debug.Log("Send to client");
-        _tcpSender.SendMessageToServers("Explosion" + "Envio desde host" + 8001);
+        _tcpSender.SendMessageToServers("Explosion|" + "Envio desde host|" + 8001);
     }
 
     public void ReciveFromClient(string message)
@@ -40,7 +40,7 @@ public class HostScriptsTcp : MonoBehaviour
     void ResetClientAndHost()
     {
         Debug.Log("ResetScene");
-        _tcpSender.SendMessageToServers("Reset" + "Envio desde host" + 8001);
+        _tcpSender.SendMessageToServers("Reset|" + "Envio desde host|" + 8001);
 
         Invoke("ResetHostScene", 3f);
     }
