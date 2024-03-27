@@ -36,6 +36,7 @@ public class ClientScripts : MonoBehaviour
     }   
 
     public void RessScene(string message) {
+        Debug.Log("Resetting ClientScene");
         SceneManager.LoadScene(0);
     }
 

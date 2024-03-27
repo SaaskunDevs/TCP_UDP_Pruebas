@@ -23,7 +23,7 @@ public class HostScripts : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Restart();
+            SendRestart();
         }
     }
 
