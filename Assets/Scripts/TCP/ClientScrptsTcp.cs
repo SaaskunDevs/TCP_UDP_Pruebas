@@ -31,7 +31,7 @@ public class ClientScrptsTcp : MonoBehaviour
         Debug.Log("Recive from host: " + message);
     }
 
-    public void ResetClientScene()
+    public void ResetClientScene(string message)
     {
         Debug.Log("ResetClient");
         SceneManager.LoadScene(0);

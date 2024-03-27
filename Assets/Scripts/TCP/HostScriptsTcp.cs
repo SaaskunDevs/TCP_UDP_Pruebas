@@ -40,7 +40,7 @@ public class HostScriptsTcp : MonoBehaviour
     void ResetClientAndHost()
     {
         Debug.Log("ResetScene");
-        _tcpSender.SendMessageToServers("Reset|" + "Envio desde host|" + 8001);
+        _tcpSender.SendMessageToServers("ResetClient|" + "Envio desde host|" + 8001);
 
         Invoke("ResetHostScene", 3f);
     }
