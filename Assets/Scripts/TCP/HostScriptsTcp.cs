@@ -24,6 +24,14 @@ public class HostScriptsTcp : MonoBehaviour
         {
             ResetClientAndHost();
         }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Application.Quit();
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            SendToClient2();
+        }
     }
 
     void SendToClient()
@@ -35,6 +43,17 @@ public class HostScriptsTcp : MonoBehaviour
     public void ReciveFromClient(string message)
     {
         Debug.Log("Recive from client: " + message);
+    }
+
+    void SendToClient2()
+    {
+        Debug.Log("Send to client");
+        _tcpSender.SendMessageToServers("ExplosionClient2|" + "Envio desde host|" + 8000);
+    }
+
+    public void ReciveFromClient2(string message)
+    {
+        Debug.Log("Recive from client 2: " + message);
     }
 
     void ResetClientAndHost()

@@ -15,7 +15,7 @@ public class MainTcp : MonoBehaviour
             _hostGameObject.SetActive(true);
         else
             _clientGameObject.SetActive(true);
-        // DontDestroyOnLoad(this.gameObject);
+
     }
     void Start()
     {
@@ -24,10 +24,6 @@ public class MainTcp : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
         if (Input.GetKeyDown(KeyCode.R))
         {
             ResetAll();
